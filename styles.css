@@ -1,9 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Marcellus&family=Gothic+A1:wght@300;400;500;600;700&display=fallback");
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+.nanum{
+    font-family: "Nanum Gothic", sans-serif !important;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.logos {
+    position: relative;
+    height: 100%;
+}
+
+.logo-2{
+    height: 60% !important;
+    align-self: flex-end;
+}
+
+/* html{
+    max-widt: auto;
+} */
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Marcellus";
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100%;
+    overflow-y: visible;
+
+    /* font-family: Arial, sans-serif; */
     margin: 0;
     padding: 0;
     background-color: #f7f7f7;
 }
+
+#intro {
+    padding: 4vw;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("assets/background-blur.png");
+    /* filter: brightness(75%); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    z-index: 3;
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.heading{
+    margin-top: 60%;
+}
+
+#details {
+    height: 100%;
+    position: relative;
+    /* top: -105vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5vw;
+}
+
+h1 {
+    font-size: 7vmax;
+}
+
+#intro h1{
+    font-weight: 200;
+    color: white;
+}
+
+
+#intro h4 {
+    font-weight: 100;
+    font-size: 1.5vmax;
+    color: white;
+}
+
+#intro h5 {
+    font-weight: 300;
+    font-size: 18px;
+    color: white;
+}
+
+.no-marg{
+    margin: 0;
+}
+
+
+/* #details h1 {
+    color: white;
+} */
 
 header {
     background-color: #337ab7;
@@ -16,27 +105,109 @@ header h1 {
     margin: 0;
     font-size: 24px;
 }
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    flex-direction: column;
+    margin-bottom: 30px;
+    /* gap: 5px; */
+}
+
+section h1 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    font-weight: lighter;
+    font-size: 6vmax;
+    font-family: "Nanum Gothic", sans-serif !important;
+}
+
+section h2 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    font-weight: lighter;
+    font-size: 5vmax;
+    font-family: "Nanum Gothic", sans-serif !important;
+}
+
+/* h2 {
+    font-size: 4vmax;
+} */
 
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    gap: 5px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 0px;
     justify-content: space-between;
 }
 
 nav li {
-    margin-right: 20px;
+    /* width: 30%; */
+    /* margin-right: 20px; */
+    background-color: olive;
+    /* padding: 20px; */
+}
+
+nav div {
+    flex: 1 1 0;
+    position: relative;
+    width: 100%;
+    border-bottom: 3px solid rgba(128, 128, 128, 0.2);
+}
+
+.nav:hover .overlay, .nav:focus .overlay, .nav:active .overlay  {
+    height: 100%;
+    /* top: 0; */
+    /* opacity: 1; */
+}
+.nav:hover a, .nav:focus a, .nav:active a{
+    color: rgb(252, 217, 217);
+    border: 2px solid white;
+    border-bottom: 0;
+    /* top: 0; */
+    /* opacity: 1; */
+}
+
+.overlay {
+    z-index: 1;
+    padding: 0;
+    border: 0;
+    transition: height 0.5s;
+    width: 100%;
+    /* opacity: 0; */
+    height: 0px;
+    /* transition: 1s ease; */
+    position: absolute;
+    background-color: hsla(76, 6%, 35%, 1);
 }
 
 nav a {
-    color: #fff;
+    color: black;
+    margin: auto;
+    font-size: 1.5vmax;
+    z-index: 10;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+    text-align: center;
+    display: flex;
+    position: relative;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
 }
 
-nav a:hover {
+/* nav a:hover {
     color: #23527c;
-}
+} */
 
 main {
     display: flex;
@@ -45,12 +216,12 @@ main {
     padding: 20px;
 }
 
-section {
+/* section {
     background-color: #fff;
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+} */
 
 h2, h3, h4 {
     margin-top: 0;
@@ -117,3 +288,137 @@ footer {
     text-align: center;
     clear: both;
 }
+
+.scroll {
+    right: 4vw;
+    position: absolute;
+    bottom: 15vh;
+    /* margin-top: 13vh; */
+    filter: brightness(70%);
+}
+
+section p{
+    font-size: 2vmax;
+}
+
+blockquote {
+    font-size: 3vmax;
+}
+
+.rest{
+    margin-top: 5px;
+}
+
+.coming-soon {
+    width: 90%;
+    height: 60px;
+    background-color: transparent;
+    border: 1px solid rgba(128, 128, 128, 1);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cs-head{
+    margin-bottom: 20px;
+}
+
+.smaller {
+    font-size: 15px;
+}
+
+.rest-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.rest-col h2 {
+    justify-self: flex-start;
+    align-self: flex-start;
+}
+
+footer{
+    left: 0;
+    position: relative;
+    align-self: flex-start;
+    background-color: transparent;
+    color: black;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    #intro h1{
+        font-size: 7vmax;
+    }
+
+    section h1{
+        font-size: 4vmax;
+    }
+
+    section h2{
+        font-size: 2.3vmax;
+        margin-bottom: 20px;
+        font-weight: bolder;
+    }
+
+    section p{
+        font-size: 1.5vmax;
+    }
+
+    /* #intro {
+        height: 90vh;
+    } */
+
+    #details{
+        /* top: -130vh; */
+        padding: 5vh 15vw;
+        /* margin-top: -40vh; */
+    }
+
+    .heading{
+        margin-top: 14%;
+    }
+
+    .scroll {
+        right: 10vw;
+        bottom: 25vh;
+        /* margin-top: -200vh; */
+    }
+
+    nav {
+        flex-direction: row;
+    }
+
+    nav a {
+        font-size: 1vmax;
+    }
+
+    nav div {
+        width: 0;
+    }
+
+    blockquote {
+        font-size: 2vmax;
+    }
+
+    .rest{
+        display: flex;
+        width: 100%;
+        gap: 50px;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        /* margin-top: 10px; */
+    }
+
+    .rest-col{
+        flex: 1 1 0;
+        width: 0;
+    }
+
+  }
