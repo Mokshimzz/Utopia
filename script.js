@@ -30,19 +30,26 @@ function change(){
         document.body.style.setProperty('--pcolor', 'rgb(249, 241, 0)');
         document.body.style.setProperty('--link', 'rgb(178, 249, 0)');
         document.body.style.setProperty('--hovcolor', 'black');
-        document.querySelector(':root').style.setProperty('--mode', 'dark');
+        
+        document.body.style.setProperty('--shadow1', 'rgba(92, 95, 84, 0.25)');
+        document.body.style.setProperty('--shadow2', 'rgba(92, 95, 84, 0.12)');
+        document.body.style.setProperty('--shadow3', 'rgba(92, 95, 84, 0.17)');
+        document.body.style.setProperty('--shadow4', 'rgba(92, 95, 84, 0.09)');
         document.body.classList.remove("light")
         document.body.classList.add("dark")
         themeico.classList.add("fa-moon")
         themeico.classList.remove("fa-sun")
     } else {
+        document.body.style.setProperty('--shadow1', 'rgba(0, 0, 0, 0.25)');
+        document.body.style.setProperty('--shadow2', 'rgba(0, 0, 0, 0.12)');
+        document.body.style.setProperty('--shadow3', 'rgba(0, 0, 0, 0.17)');
+        document.body.style.setProperty('--shadow4', 'rgba(0, 0, 0, 0.09)');
         document.body.style.setProperty('--black', 'black');
         document.body.style.setProperty('--white', 'white');
         document.body.style.setProperty('--bg', '#f2f1e2');
         document.body.style.setProperty('--pcolor', 'hsla(76, 6%, 35%, 0.6)');
         document.body.style.setProperty('--link', 'rgb(70, 1, 1)');
         document.body.style.setProperty('--hovcolor', 'rgb(252, 217, 217)');
-        // document.querySelector(':root').style.setProperty('--mode', 'dark');
         document.body.classList.remove("dark")
         document.body.classList.add("light")
         themeico.classList.add("fa-sun")
