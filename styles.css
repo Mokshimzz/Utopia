@@ -1,8 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Marcellus&family=Gothic+A1:wght@300;400;500;600;700&display=fallback");
 @import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap');
 
+:root{
+    --black : black;
+    --white : white;
+    --whitea : rgba(255, 255, 255, 0.8);
+    --pcolor : hsla(76, 6%, 35%, 0.6);
+    --scolor : rgb(137, 177, 26);
+    /* --mode : light; */
+    /* --scolor : rgb(178, 249, 0); */
+    --bg: #f2f1e2;
+    --hovcolor:rgb(252, 217, 217);
+    --link:rgb(70, 1, 1);
+    --shadow1: rgba(0, 0, 0, 0.25);
+    --shadow2: rgba(0, 0, 0, 0.12);
+    --shadow3: rgba(0, 0, 0, 0.17);
+    --shadow4: rgba(0, 0, 0, 0.09);
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+.dark {
+    justify-tracks: "blue";
+}
+
+.light {
+    justify-tracks: "blue";
 }
 
 /*Author: Mokshim Gupta*/
@@ -37,7 +62,7 @@ body {
     /* font-family: Arial, sans-serif; */
     margin: 0;
     padding: 0;
-    background-color: #f2f1e2;
+    background-color: var(--bg);
 }
 
 .hidden{
@@ -62,7 +87,7 @@ body {
 }
 
 #intro {
-    padding: 4vw;
+    padding: 2vw 4vw;
     width: 100vw;
     height: 100vh;
     background-image: url("assets/background-blur.png");
@@ -72,7 +97,7 @@ body {
     background-size: 100% 100%;
     z-index: 3;
     position: absolute;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: var(--shadow1) 0px 54px 55px, var(--shadow2) 0px -12px 30px, var(--shadow2) 0px 4px 6px, var(--shadow3) 0px 12px 13px, var(--shadow4) 0px -3px 5px;
 }
 
 /* .nav-vis {
@@ -102,7 +127,7 @@ hr {
     clear:both;
     display:block;
     width: 96%;               
-    background-color:black;
+    background-color:var(--black);
     height: 1.5px;
 }
 
@@ -120,25 +145,27 @@ hr {
 }
 
 h1 {
+    color: var(--black);
     font-size: 7vmax;
 }
 
 #intro h1{
+    color: var(--black);
     font-weight: 200;
-    color: white;
+    color: var(--white);
 }
 
 
 #intro h4 {
     font-weight: 100;
     font-size: 1.5vmax;
-    color: white;
+    color: var(--white);
 }
 
 #intro h5 {
     font-weight: 300;
     font-size: 18px;
-    color: white;
+    color: var(--white);
 }
 
 .no-marg{
@@ -167,8 +194,8 @@ h1 {
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 100px;
-    background-color: rgba(92, 95, 84, 0.5);
-    color: #fff;
+    background-color: var(--pcolor);
+    color: var(--white);
     font-family: "Gothic A1", sans-serif !important;
     text-align: center;
     padding: 15px;
@@ -184,8 +211,8 @@ h1 {
     height: 7vmax;
     position: relative;
     width: 10px;
-    color: white;
-    background-color: white;
+    color: var(--white);
+    background-color: var(--white);
 }
 
   
@@ -196,25 +223,14 @@ h1 {
     color: white;
 } */
 
-header {
-    background-color: #337ab7;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
 .nav-icon {
-    color: hsla(76, 6%, 35%, 0.6);
+    color: var(--pcolor);
     transition: ease-in 0.2s;
 }
 .nav-icon:hover {
-    color: rgb(137, 177, 26);
+    color: var(--scolor);
 }
 
-header h1 {
-    margin: 0;
-    font-size: 24px;
-}
 nav{
     display: flex;
     align-items: center;
@@ -228,6 +244,7 @@ nav{
 section h1 {
     margin: 0;
     padding: 0;
+    color: var(--black);
     margin-bottom: 20px;
     font-weight: lighter;
     font-size: 6vmax;
@@ -239,6 +256,7 @@ section h2 {
     padding: 0;
     margin-bottom: 20px;
     font-weight: lighter;
+    color: var(--black);
     font-size: 5vmax;
     font-family: "Nanum Gothic", sans-serif !important;
 }
@@ -262,7 +280,7 @@ nav ul {
 nav li {
     /* width: 30%; */
     /* margin-right: 20px; */
-    background-color: olive;
+    background-color: var(--scolor);
     /* padding: 20px; */
 }
 
@@ -270,7 +288,7 @@ nav div {
     flex: 1 1 0;
     position: relative;
     width: 100%;
-    border-bottom: 3px solid rgba(128, 128, 128, 0.2);
+    border-bottom: 3px solid var(--pcolor);
 }
 
 .nav:hover .overlay, .nav:focus .overlay, .nav:active .overlay  {
@@ -279,8 +297,8 @@ nav div {
     /* opacity: 1; */
 }
 .nav:hover a, .nav:focus a, .nav:active a{
-    color: rgb(252, 217, 217);
-    border: 2px solid white;
+    color: var(--hovcolor);
+    border: 2px solid var(--white);
     border-bottom: 0;
     /* top: 0; */
     /* opacity: 1; */
@@ -296,11 +314,11 @@ nav div {
     height: 0px;
     /* transition: 1s ease; */
     position: absolute;
-    background-color: hsla(76, 6%, 35%, 1);
+    background-color: var(--pcolor);
 }
 
 nav a {
-    color: black;
+    color: var(--black);
     margin: auto;
     font-size: 1.5vmax;
     z-index: 10;
@@ -333,13 +351,15 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 } */
 
-h2, h3, h4 {
+h2, h3, h4, h6 {
     margin-top: 0;
     font-weight: bold;
+    color: var(--black);
 }
 
 p {
     margin-bottom: 20px;
+    color: var(--black);
 }
 
 blockquote {
@@ -348,56 +368,7 @@ blockquote {
     margin-bottom: 20px;
 }
 
-button {
-    background-color: #337ab7;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
 
-button:hover {
-    background-color: #23527c;
-}
-
-#committees ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-#committees li {
-    margin-bottom: 20px;
-}
-
-/* #committees a {
-    color: #337ab7;
-    text-decoration: none;
-} */
-
-#contact ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-#contact li {
-    margin-bottom: 10px;
-}
-
-/* #contact a {
-    color: #337ab7;
-    text-decoration: none;
-} */
-
-footer {
-    background-color: #337ab7;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    clear: both;
-}
 
 .scroll {
     right: 4vw;
@@ -409,6 +380,7 @@ footer {
 
 section p{
     font-size: 2vmax;
+    color: var(--black);
 }
 
 blockquote {
@@ -423,7 +395,7 @@ blockquote {
     width: 90%;
     height: 60px;
     background-color: transparent;
-    border: 1px solid rgba(128, 128, 128, 1);
+    border: 1px solid var(--pcolor);
     margin-bottom: 20px;
     border-radius: 10px;
     display: flex;
@@ -448,6 +420,7 @@ blockquote {
 
 .rest-col h2 {
     justify-self: flex-start;
+    color: var(--black);
     align-self: flex-start;
 }
 
@@ -456,7 +429,7 @@ footer{
     position: relative;
     align-self: flex-start;
     background-color: transparent;
-    color: black;
+    color: var(--black);
 }
 
 a {
@@ -469,7 +442,7 @@ ul {
 
 li a {
     text-decoration: underline;
-    color: rgb(50, 1, 1);
+    color: var(--link);
 }
 
 .tooltip:hover .tooltiptext {
@@ -484,13 +457,16 @@ li a {
 @media screen and (min-width: 768px) {
     #intro h1{
         font-size: 7vmax;
+        color: var(--black);
     }
 
     section h1{
         font-size: 4vmax;
+        color: var(--black);
     }
 
     section h2{
+        color: var(--black);
         font-size: 2.3vmax;
         margin-bottom: 20px;
         font-weight: 400;
@@ -498,6 +474,7 @@ li a {
 
     section p{
         font-size: 1.5vmax;
+        color: var(--black);
     }
 
     /* #intro {

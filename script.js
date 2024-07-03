@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         scrollTrigger:{
             trigger:"#intro",
             pin:"#details",
-            scrub:10,
+            scrub:3,
             pinSpacing:false,
             onLeave:()=>{nav.classList.remove("hidden")
         // nav.classList.add(".nav-tran")
@@ -19,6 +19,38 @@ document.addEventListener("DOMContentLoaded", (event) => {
     })
 
 });
+
+let themeico = document.getElementById("theme-ico")
+function change(){
+
+    if (document.body.classList.contains("light")){
+        document.body.style.setProperty('--black', 'rgb(83, 249, 0)');
+        document.body.style.setProperty('--white', 'black');
+        document.body.style.setProperty('--bg', 'black');
+        document.body.style.setProperty('--pcolor', 'rgb(249, 241, 0)');
+        document.body.style.setProperty('--link', 'rgb(178, 249, 0)');
+        document.body.style.setProperty('--hovcolor', 'black');
+        document.querySelector(':root').style.setProperty('--mode', 'dark');
+        document.body.classList.remove("light")
+        document.body.classList.add("dark")
+        themeico.classList.add("fa-moon")
+        themeico.classList.remove("fa-sun")
+    } else {
+        document.body.style.setProperty('--black', 'black');
+        document.body.style.setProperty('--white', 'white');
+        document.body.style.setProperty('--bg', '#f2f1e2');
+        document.body.style.setProperty('--pcolor', 'hsla(76, 6%, 35%, 0.6)');
+        document.body.style.setProperty('--link', 'rgb(70, 1, 1)');
+        document.body.style.setProperty('--hovcolor', 'rgb(252, 217, 217)');
+        // document.querySelector(':root').style.setProperty('--mode', 'dark');
+        document.body.classList.remove("dark")
+        document.body.classList.add("light")
+        themeico.classList.add("fa-sun")
+        themeico.classList.remove("fa-moon")
+
+    }
+
+}
 
 // import Typewriter from 'typewriter-effect/dist/core';
 var app = document.getElementById('typew');
