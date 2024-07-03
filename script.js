@@ -22,15 +22,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         }
     })
 
-    gsap.to("#details", {
-        scrollTrigger:{
-            trigger:"#details",
-            pin:"#navbar",
-            scrub:10,
-            pinSpacing:false,
-            // end:"+=100vh"
-        }
-    })
 });
 
 let details = document.querySelector("#details")
