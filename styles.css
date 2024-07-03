@@ -94,6 +94,7 @@ body {
 
 .heading{
     margin-top: 60%;
+    height: 20vmax;
 }
 
 hr {
@@ -178,6 +179,15 @@ h1 {
     position: absolute;
     z-index: 1;
 }
+
+.cur{
+    height: 7vmax;
+    position: relative;
+    width: 10px;
+    color: white;
+    background-color: white;
+}
+
   
   /* Show the tooltip text when you mouse over the tooltip container */
 
@@ -466,6 +476,10 @@ li a {
     visibility: visible;
 }
 
+.scrollto{
+    margin-top: 15vmax;
+}
+
 
 @media screen and (min-width: 768px) {
     #intro h1{
@@ -498,6 +512,7 @@ li a {
 
     .heading{
         margin-top: 14%;
+        height: 10vmax;
     }
 
     .scroll {
@@ -553,6 +568,10 @@ li a {
     .rest-col{
         flex: 1 1 0;
         width: 0;
+    }
+
+    .scrollto{
+        margin-top: 10vmax;
     }
 
   }

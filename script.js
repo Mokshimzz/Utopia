@@ -20,6 +20,23 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 });
 
+// import Typewriter from 'typewriter-effect/dist/core';
+var app = document.getElementById('typew');
+var typewriter = new Typewriter(app, {
+    loop: true,
+    delay: 100,
+    // cursorClassName:"cur"
+});
+console.log(typewriter)
+
+typewriter
+  .typeString('Utopia MUN 2024')
+  .pauseFor(200)
+  .deleteChars('Utopia MUN 2024'.length - 1)
+  .typeString('MUN 2024')
+  .pauseFor(400)
+  .start();
+
 let nav = document.querySelector("#intro")
 let comp = window.getComputedStyle(nav)
 // document.addEventListener("scroll", (e) => {
