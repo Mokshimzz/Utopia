@@ -59,7 +59,6 @@ function change(){
 
 }
 
-// import Typewriter from 'typewriter-effect/dist/core';
 var app = document.getElementById('typew');
 var typewriter = new Typewriter(app, {
     loop: true,
