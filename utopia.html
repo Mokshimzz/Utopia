@@ -47,13 +47,13 @@
                     
                 <div class="nav">
                     <div class="overlay"></div>
-                    <a href="#info" onclick="viewInfo()">Information</a></div>
+                    <a onclick="viewInfo()">Information</a></div>
                 <div class="nav">
                     <div class="overlay"></div>
-                    <a href="#committees-cont" onclick="viewCommittees()">Committees</a></div>
+                    <a onclick="viewCommittees()">Committees</a></div>
                 <div class="nav">
                     <div class="overlay"></div>
-                    <a href="#contact-cont" onclick="viewContact()">Contact</a>
+                    <a onclick="viewContact()">Contact</a>
                 </div>
             </nav>
             
@@ -201,17 +201,17 @@
     
     <div id="fixed-navbar" style="display: flex; flex-direction: column; gap: 50px; justify-content: center; align-items: center;top:0;width: 7vw; height: 100vh; position: fixed; z-index: 15;right: 10px;">
         <!-- <h4 style="text-align: center;width: 15px;height: 70px;margin-left: -65px;position: absolute;">L I N K S</h4> -->
-        <a>
+        <a onclick="viewInfo()">
             <i class="fa-solid fa-circle-info fa-xl nav-icon tooltip">
                 <span class="tooltiptext">Information</span>
             </i>
         </a>
-        <a>
+        <a onclick="viewCommittees()">
             <i class="fa-solid fa-rectangle-list fa-xl nav-icon tooltip">
                 <span class="tooltiptext">Committees</span>
             </i>
         </a>
-        <a>
+        <a onclick="viewContact()">
             <i class="fa-solid fa-address-book fa-xl nav-icon tooltip">
                 <span class="tooltiptext">Contact us</span>
             </i>

@@ -37,15 +37,15 @@ function skip(){
 
 function viewInfo(){
     window.scroll(0, parseFloat(comp.getPropertyValue("height")) + 2* parseFloat(comp.getPropertyValue("padding-bottom")))
-    info.scrollIntoView()
+    // info.scrollIntoView(true)
 }
 function viewCommittees(){
-    window.scroll(0, parseFloat(comp.getPropertyValue("height")) + 2* parseFloat(comp.getPropertyValue("padding-bottom")))
-    committees.scrollIntoView()
+    window.scroll(0, parseFloat(comp.getPropertyValue("height")) + 2* parseFloat(comp.getPropertyValue("padding-bottom")) + committees.offsetTop)
+    // committees.scrollIntoView(true)
 }
 function viewContact(){
-    window.scroll(0, parseFloat(comp.getPropertyValue("height")) + 2* parseFloat(comp.getPropertyValue("padding-bottom")))
-    contact.scrollIntoView()
+    window.scroll(0, parseFloat(comp.getPropertyValue("height")) + 2* parseFloat(comp.getPropertyValue("padding-bottom")) + contact.offsetTop)
+    // contact.scrollIntoView(true)
 }
 
 var countDownDate = new Date("Jan 5, 2030 15:37:25").getTime();
@@ -66,8 +66,8 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+  document.getElementById("demo").innerHTML = days + "<span style='color: rgba(255, 255, 255, 1);'>D </span>" + hours + "<span style='color: rgba(255, 255, 255, 1);'>H </span>"
+  + minutes + "<span style='color: rgba(255, 255, 255, 1);'>M </span>" + seconds + "<span style='color: rgba(255, 255, 255, 1);'>S </span>";
 
   // If the count down is finished, write some text
   if (distance < 0) {
