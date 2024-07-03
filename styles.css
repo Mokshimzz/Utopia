@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Marcellus&family=Gothic+A1:wght@300;400;500;600;700&display=fallback");
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap');
 
 .nanum{
-    font-family: "Nanum Gothic", sans-serif !important;
+    font-family: "Gothic A1", sans-serif !important;
     font-weight: 400;
     font-style: normal;
 }
@@ -27,11 +27,33 @@ body {
     width: 100vw;
     height: 100%;
     overflow-y: visible;
+    /* position: relative; */
 
     /* font-family: Arial, sans-serif; */
     margin: 0;
     padding: 0;
     background-color: #f7f7f7;
+}
+
+.hidden{
+    opacity: 0 !important;
+    visibility: hidden !important;
+    display: none !important;
+}
+
+#hidden{
+    opacity: 0;
+}
+
+#committees-cont{
+    position: relative;
+    width: 100%;
+    /* top: 10vh; */
+    /* height: 80vh; */
+}
+#cont-cont{
+    position: relative;
+    width: 100%;
 }
 
 #intro {
@@ -52,14 +74,25 @@ body {
     margin-top: 60%;
 }
 
+hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 96%;               
+    background-color:black;
+    height: 1.5px;
+}
+
 #details {
-    height: 100%;
+    height:100%;
+    overflow-y: hidden;
     position: relative;
+    flex: 1 1 0px;
     /* top: -105vh; */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
     padding: 5vw;
 }
 
@@ -121,7 +154,7 @@ section h1 {
     margin-bottom: 20px;
     font-weight: lighter;
     font-size: 6vmax;
-    font-family: "Nanum Gothic", sans-serif !important;
+    font-family: "Gothic A1", sans-serif !important;
 }
 
 section h2 {
@@ -261,10 +294,10 @@ button:hover {
     margin-bottom: 20px;
 }
 
-#committees a {
+/* #committees a {
     color: #337ab7;
     text-decoration: none;
-}
+} */
 
 #contact ul {
     list-style: none;
@@ -276,10 +309,10 @@ button:hover {
     margin-bottom: 10px;
 }
 
-#contact a {
+/* #contact a {
     color: #337ab7;
     text-decoration: none;
-}
+} */
 
 footer {
     background-color: #337ab7;
@@ -349,6 +382,19 @@ footer{
     color: black;
 }
 
+a {
+    cursor: pointer !important;
+}
+
+ul {
+    list-style: none;
+}
+
+li a {
+    text-decoration: underline;
+    color: rgb(50, 1, 1);
+}
+
 
 
 @media screen and (min-width: 768px) {
@@ -363,7 +409,7 @@ footer{
     section h2{
         font-size: 2.3vmax;
         margin-bottom: 20px;
-        font-weight: bolder;
+        font-weight: 400;
     }
 
     section p{
@@ -414,6 +460,24 @@ footer{
         align-items: center;
         justify-content: center;
         /* margin-top: 10px; */
+    }
+
+    #coms-cont{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 30px;
+    }
+
+    .col-1{
+        grid-column: 2;
+        margin-top:70px;
+        /* justify-content: center;
+        align-items: center; */
+        /* order: -1; */
+    }
+    .col-2{
+        grid-column: 1;
+        /* margin-bottom: -150px; */
     }
 
     .rest-col{
