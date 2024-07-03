@@ -20,11 +20,33 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 });
 
-// let details = document.querySelector("#details")
-// let contact = document.querySelector("#contact-cont")
-// let committees = document.querySelector("#committees-cont")
-// let info = document.querySelector("#info")
-// let rest = document.querySelector(".rest")
+let nav = document.querySelector("#intro")
+let comp = window.getComputedStyle(nav)
+// document.addEventListener("scroll", (e) => {
+//     let scroll = this.scrollY;
+//     console.log(scroll,   parseFloat(comp.getPropertyValue("height")),parseFloat(comp.getPropertyValue("height")) + parseFloat(comp.getPropertyValue("padding-bottom")))
+// })
+let contact = document.querySelector("#contact-cont")
+let committees = document.querySelector("#committees-cont")
+let info = document.querySelector("#info")
+let rest = document.querySelector(".rest")
+
+function skip(){
+    window.scroll(0, parseFloat(comp.getPropertyValue("height")) + 2* parseFloat(comp.getPropertyValue("padding-bottom")))
+}
+
+function viewInfo(){
+    window.scroll(0, parseFloat(comp.getPropertyValue("height")) + 2* parseFloat(comp.getPropertyValue("padding-bottom")))
+    info.scrollIntoView()
+}
+function viewCommittees(){
+    window.scroll(0, parseFloat(comp.getPropertyValue("height")) + 2* parseFloat(comp.getPropertyValue("padding-bottom")))
+    committees.scrollIntoView()
+}
+function viewContact(){
+    window.scroll(0, parseFloat(comp.getPropertyValue("height")) + 2* parseFloat(comp.getPropertyValue("padding-bottom")))
+    contact.scrollIntoView()
+}
 
 var countDownDate = new Date("Jan 5, 2030 15:37:25").getTime();
 
