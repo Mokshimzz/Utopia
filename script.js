@@ -1,16 +1,6 @@
 document.addEventListener("DOMContentLoaded", (event) => {
 
-    // const intro = document.querySelector('#intro');
-    // const details = document.querySelector('#details');
-
-    // if (!(intro && details)) return;
-
-    // const checkpoint = intro.offsetHeight;
-    // let opacity;
-
-    // details.style.bottom = (window.innerHeight - details.offsetHeight) + 'px';
-    // console.log(window.innerHeight - details.offsetHeight)
-
+    let nav = document.querySelector("#fixed-navbar")
     gsap.registerPlugin(ScrollTrigger)
     gsap.to("#intro", {
         scrollTrigger:{
@@ -18,62 +8,48 @@ document.addEventListener("DOMContentLoaded", (event) => {
             pin:"#details",
             scrub:10,
             pinSpacing:false,
+            onLeave:()=>{nav.classList.remove("hidden")
+        // nav.classList.add(".nav-tran")
+    },
+            onLeaveBack:()=>{nav.classList.remove("hidden")},
+            onEnter:()=>{nav.classList.add("hidden")},
+            onEnterBack:()=>{nav.classList.add("hidden")}
             // end:"+=100vh"
         }
     })
 
 });
 
-let details = document.querySelector("#details")
-let contact = document.querySelector("#contact-cont")
-let committees = document.querySelector("#committees-cont")
-let info = document.querySelector("#info")
-let rest = document.querySelector(".rest")
+// let details = document.querySelector("#details")
+// let contact = document.querySelector("#contact-cont")
+// let committees = document.querySelector("#committees-cont")
+// let info = document.querySelector("#info")
+// let rest = document.querySelector(".rest")
 
-function viewInfo(){
+var countDownDate = new Date("Jan 5, 2030 15:37:25").getTime();
 
-    info.scrollIntoView()
+// Update the count down every 1 second
+var x = setInterval(function() {
 
-    // if(!contact.classList.contains("hidden")){
-    //     contact.classList.add("hidden")
-    // }
-    // if(!committees.classList.contains("hidden")){
-    //     committees.classList.add("hidden")
-    // }
+  // Get today's date and time
+  var now = new Date().getTime();
 
-    // info.classList.remove("hidden")
-    // rest.classList.remove("hidden")
-}
-function viewCommittees(){
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
 
-    committees.scrollIntoView()
-    // if(!contact.classList.contains("hidden")){
-    //     contact.classList.add("hidden")
-    // }
-    // if(!info.classList.contains("hidden")){
-    //     info.classList.add("hidden")
-    // }
-    // if(!rest.classList.contains("hidden")){
-    //     rest.classList.add("hidden")
-    // }
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // committees.classList.remove("hidden")
-    // details.style.height = (details.style.height - (40 * committees.offsetHeight)) + "px"
-}
-function viewContact(){
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
 
-    contact.scrollIntoView()
-    // if(!info.classList.contains("hidden")){
-    //     info.classList.add("hidden")
-    // }
-    // if(!rest.classList.contains("hidden")){
-    //     rest.classList.add("hidden")
-    // }
-    // if(!committees.classList.contains("hidden")){
-    //     committees.classList.add("hidden")
-    // }
-
-    // contact.classList.remove("hidden")
-
-}
-// gsap.registerPlugin(ScrollTrigger)
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
