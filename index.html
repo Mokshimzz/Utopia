@@ -14,8 +14,11 @@
     <!-- AUTHOR: Mokshim Gupta -->
     <!-- DATE: 7/2/2024 -->
     <!-- UMUN 2024 Website -->
-<body class="light">
-    <div id="intro">
+<body class="light blocked">
+    <div id="preloader" style="background-color: black; width: 100vw; height: 100vh; position: absolute; z-index: 15;">
+        <img width="8%" height="15%" id="load" src="img/loading.gif" alt="loading...">
+    </div>
+    <div id="intro" class="hidden">
         <a>
             <div style="height: 100px; width: 100px; display: flex;">
                 <img class="logos" src="https://d33wubrfki0l68.cloudfront.net/5ff750cd1b6b470d121512259aeaa4cabb07903c/717fb/assets/img/dps-logo.png">
@@ -41,7 +44,7 @@
             <i class="fa-solid fa-right-long"></i>
             </div>
     </div>
-    <div id="details">
+    <div id="details" class="hidden">
 
         <div style="top:0px;width: 100%; position: relative; display: flex; align-items: center; justify-content: center; flex-direction: column;">
             <h1 style="color: var(--black); text-align: center; font-weight: 100;">16 <sup style="font-size: 5vmax; bottom: 0;">th</sup> edition of Utopia MUN 2024</h1>
@@ -83,13 +86,20 @@
             </section>
             <section class="rest-col">
                 <h2 class="cs-head">Code of Conduct</h2>
-                <div class="coming-soon">  <!-- Add the stuff recieved from tvisha/ruth :( -->
-                    <p class="smaller">Coming Soon!</p>
-                </div>
+
+                <a class="coming-soon">
+                    <div>  <!-- Add the stuff recieved from tvisha/ruth :( -->
+                        <p class="smaller">Coming Soon!</p>
+                    </div>
+                </a>
                 <h2 class="cs-head">Allotments</h2>
-                <div class="coming-soon">
-                    <p class="smaller">Coming Soon!</p>
-                </div>
+                <a class="coming-soon" href="https://drive.google.com/file/d/1fKgwu4FtI-Z8vEgl8Z4IKjG6WOMET9Cf/view?usp=sharing" target="_blank">
+                    <div>
+                        <p class="smaller">View Document 
+                            <i class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i>
+                        </p>
+                    </div>
+                </a>
                 <h2 class="cs-head">Crisis Updates</h2>
                 <div class="coming-soon">
                     <p class="smaller">Coming Soon!</p>
@@ -203,7 +213,7 @@
         </footer> 
     </div>
     
-    <div id="fixed-navbar" style="display: flex; flex-direction: column; gap: 50px; justify-content: center; align-items: center;top:0;width: 7vw; height: 100vh; position: fixed; z-index: 15;right: 10px;">
+    <div id="fixed-navbar" class="hidden" style="display: flex; flex-direction: column; gap: 50px; justify-content: center; align-items: center;top:0;width: 7vw; height: 100vh; position: fixed; z-index: 15;right: 10px;">
         <!-- <h4 style="text-align: center;width: 15px;height: 70px;margin-left: -65px;position: absolute;">L I N K S</h4> -->
         <a  style="position: absolute; top: 5vmax; width: 100%; display: flex; align-items: center;justify-content: center;" onclick="change()">
             <i id="theme-ico" style="color: var(--black);" class="fa-solid fa-sun fa-2xl nav-icon">

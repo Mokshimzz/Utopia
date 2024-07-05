@@ -20,6 +20,17 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 });
 
+window.addEventListener("load", (event) => {
+    let el1 = document.getElementById("intro")
+    let el2 = document.getElementById("details")
+    let el3 = document.querySelector("body")
+    let el4 = document.getElementById("preloader")
+    el1.classList.remove("hidden")
+    el2.classList.remove("hidden")
+    el3.classList.remove("blocked")
+    el4.classList.add("hidden")
+  });
+
 let themeico = document.getElementById("theme-ico")
 function change(){
 
