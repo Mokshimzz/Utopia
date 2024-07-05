@@ -78,6 +78,7 @@ body {
 .hidden{
     /* opacity: 0 !important; */
     visibility: hidden !important;
+    transition: all 0.5 ease;
     /* display: none !important; */
 }
 
