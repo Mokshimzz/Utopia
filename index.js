@@ -114,7 +114,7 @@ function viewContact(){
     // contact.scrollIntoView(true)
 }
 
-var countDownDate = new Date("Jul 26, 2024 09:30:00").getTime();
+var countDownDate = new Date("Aug 01, 2025 09:30:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
