@@ -37,7 +37,7 @@ function change(){
     if (document.body.classList.contains("light")){
         document.body.style.setProperty('--black', 'rgb(83, 249, 0)');
         document.body.style.setProperty('--white', 'black');
-        document.body.style.setProperty('--bg', 'black');
+        document.body.style.setProperty('--bgi', 'url("img/black.jpg")');
         document.body.style.setProperty('--pcolor', 'rgb(249, 241, 0)');
         document.body.style.setProperty('--link', 'rgb(178, 249, 0)');
         document.body.style.setProperty('--hovcolor', 'black');
@@ -46,6 +46,7 @@ function change(){
         document.body.style.setProperty('--shadow2', 'rgba(92, 95, 84, 0.12)');
         document.body.style.setProperty('--shadow3', 'rgba(92, 95, 84, 0.17)');
         document.body.style.setProperty('--shadow4', 'rgba(92, 95, 84, 0.09)');
+        document.body.style.setProperty('--shadow5', 'rgb(0, 0, 0)');
         document.body.classList.remove("light")
         document.body.classList.add("dark")
         themeico.classList.add("fa-moon")
@@ -55,10 +56,13 @@ function change(){
         document.body.style.setProperty('--shadow2', 'rgba(0, 0, 0, 0.12)');
         document.body.style.setProperty('--shadow3', 'rgba(0, 0, 0, 0.17)');
         document.body.style.setProperty('--shadow4', 'rgba(0, 0, 0, 0.09)');
+        document.body.style.setProperty('--shadow5', 'rgba(251, 249, 249, 0.404)');
         document.body.style.setProperty('--black', 'black');
         document.body.style.setProperty('--white', 'white');
-        document.body.style.setProperty('--bg', '#f2f1e2');
-        document.body.style.setProperty('--pcolor', 'hsla(76, 6%, 35%, 0.6)');
+        document.body.style.setProperty('--bg', '#92dff3');
+        document.body.style.setProperty('--bgi', 'url("img/bg2.png")');
+
+        document.body.style.setProperty('--pcolor', 'rgb(17, 54, 73, 0.6)'); //orignal - 'hsla(76, 6%, 35%, 0.6)
         document.body.style.setProperty('--link', 'rgb(70, 1, 1)');
         document.body.style.setProperty('--hovcolor', 'rgb(252, 217, 217)');
         document.body.classList.remove("dark")
@@ -79,10 +83,10 @@ var typewriter = new Typewriter(app, {
 console.log(typewriter)
 
 typewriter
-  .typeString('Utopia MUN 2024')
+  .typeString('Utopia MUN 2025')
   .pauseFor(200)
-  .deleteChars('Utopia MUN 2024'.length - 1)
-  .typeString('MUN 2024')
+  .deleteChars('Utopia MUN 2025'.length - 1)
+  .typeString('MUN 2025')
   .pauseFor(400)
   .start();
 
