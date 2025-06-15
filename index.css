@@ -5,17 +5,20 @@
     --black : black;
     --white : white;
     --whitea : rgba(255, 255, 255, 0.8);
-    --pcolor : rgba(92, 95, 84, 0.6);
+    --pcolor : rgba(2, 54, 81, 0.7);
     --scolor : rgb(137, 177, 26);
+    /*changed pcolor, orignal - (92, 95, 84, 0.6)*/
     /* --mode : light; */
     /* --scolor : rgb(178, 249, 0); */
-    --bg: #f2f1e2;
+    --bg: #92dff3;
     --hovcolor:rgb(252, 217, 217);
     --link:rgb(70, 1, 1);
     --shadow1: rgba(0, 0, 0, 0.25);
     --shadow2: rgba(0, 0, 0, 0.12);
     --shadow3: rgba(0, 0, 0, 0.17);
     --shadow4: rgba(0, 0, 0, 0.09);
+    --shadow5: rgba(251, 249, 249, 0.404);
+    --bgi: url("img/bg2.png")
 }
 
 html {
@@ -32,7 +35,8 @@ html {
 
 /*Author: Mokshim Gupta*/
 .nanum{
-    font-family: "Gothic A1", sans-serif !important;
+    font-family: "Georgia";
+    /*font-family: "Gothic A1", sans-serif !important;*/
     font-weight: 400;
     font-style: normal;
 }
@@ -46,6 +50,7 @@ html {
     height: 60% !important;
     align-self: flex-end;
 }
+
 
 /* html{
     max-widt: auto;
@@ -72,7 +77,10 @@ body {
     /* font-family: Arial, sans-serif; */
     margin: 0;
     padding: 0;
-    background-color: var(--bg);
+    /*background-color: var(--bg);*/
+    background-image: var(--bgi);
+    /*background-image: url("img/bg2.png");*/
+    background-attachment: fixed;
 }
 
 .hidden{
@@ -101,7 +109,7 @@ body {
     padding: 2vw 4vw;
     width: 100vw;
     height: 100vh;
-    background-image: url("img/background-blur.png");
+    background-image: url("img/background-2.png");
     /* filter: brightness(75%); */
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -153,11 +161,14 @@ hr {
     /* align-items: center;
     justify-content: center; */
     padding: 5vw;
+    /*background-color: rgba(198, 186, 186, 0.342);*/
+    background-color: var(--shadow5);
 }
 
 h1 {
     color: var(--black);
     font-size: 7vmax;
+    
 }
 
 #intro h1{
@@ -207,7 +218,8 @@ h1 {
     width: 100px;
     background-color: var(--pcolor);
     color: var(--white);
-    font-family: "Gothic A1", sans-serif !important;
+    /*font-family: "Gothic A1", sans-serif !important;*/
+    font-family: "Georgia";
     text-align: center;
     padding: 15px;
     font-size: 1vmax;
@@ -239,7 +251,7 @@ h1 {
     transition: ease-in 0.2s;
 }
 .nav-icon:hover {
-    color: var(--scolor);
+    color: #336D89;
 }
 
 nav{
@@ -259,7 +271,8 @@ section h1 {
     margin-bottom: 20px;
     font-weight: lighter;
     font-size: 6vmax;
-    font-family: "Gothic A1", sans-serif !important;
+    /*font-family: "Gothic A1", sans-serif !important;*/
+    font-family: "Georgia";
 }
 
 section h2 {
@@ -269,7 +282,8 @@ section h2 {
     font-weight: lighter;
     color: var(--black);
     font-size: 5vmax;
-    font-family: "Nanum Gothic", sans-serif !important;
+    /*font-family: "Nanum Gothic", sans-serif !important;*/
+    font-family: "Georgia";
 }
 
 /* h2 {
@@ -369,8 +383,10 @@ h2, h3, h4, h6 {
 }
 
 p {
+    text-align: justify;
     margin-bottom: 20px;
     color: var(--black);
+    font-weight: 500;
 }
 
 blockquote {
@@ -414,14 +430,17 @@ blockquote {
     transition: 0.6s;
     cursor: pointer;
     text-decoration: none;
+    
 }
 
 
 .coming-soon:hover{
-    background-color: rgba(27, 26, 26, 0.821);
+    /*background-color: rgba(27, 26, 26, 0.821);*/
+    background-color: var(--pcolor);
 }
 .coming-soon:hover p{
-    color: var(--bg);
+   /* color: var(--bg);*/
+   color: var(--hovcolor);
 }
 .coming-soon:active{
     background-color: rgb(153, 154, 149);
