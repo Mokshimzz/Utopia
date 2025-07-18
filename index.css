@@ -12,7 +12,7 @@
     /* --scolor : rgb(178, 249, 0); */
     --bg: #92dff3;
     --hovcolor:rgb(252, 217, 217);
-    --link:rgb(70, 1, 1);
+    --link:rgb(82, 6, 6);
     --shadow1: rgba(0, 0, 0, 0.25);
     --shadow2: rgba(0, 0, 0, 0.12);
     --shadow3: rgba(0, 0, 0, 0.17);
@@ -387,6 +387,10 @@ p {
     margin-bottom: 20px;
     color: var(--black);
     font-weight: 500;
+}
+
+#links{
+    font-size: 20px;
 }
 
 blockquote {
