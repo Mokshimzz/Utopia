@@ -39,7 +39,7 @@ function change(){
         document.body.style.setProperty('--white', 'black');
         document.body.style.setProperty('--bgi', 'url("img/black.jpg")');
         document.body.style.setProperty('--pcolor', 'rgb(249, 241, 0)');
-        document.body.style.setProperty('--link', 'rgb(178, 249, 0)');
+        document.body.style.setProperty('--link', 'rgb(249, 241, 0)');
         document.body.style.setProperty('--hovcolor', 'black');
         
         document.body.style.setProperty('--shadow1', 'rgba(92, 95, 84, 0.25)');
